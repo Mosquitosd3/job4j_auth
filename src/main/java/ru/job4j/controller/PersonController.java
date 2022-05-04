@@ -20,9 +20,7 @@ public class PersonController {
 
     @GetMapping("/")
     public List<Person> findALl() {
-        List<Person> rsl = new ArrayList<>();
-        service.findAll().forEach(rsl::add);
-        return rsl;
+        return service.findAll();
     }
 
     @GetMapping("/{id}")
