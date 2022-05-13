@@ -22,6 +22,10 @@ public class Employee {
     @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
     private List<Person> persons = new ArrayList<>();
 
+    public void addPerson(Person person) {
+        persons.add(person);
+    }
+
     public int getId() {
         return id;
     }

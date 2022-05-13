@@ -11,6 +11,8 @@ public class Person {
     private int id;
     private String login;
     private String password;
+    @Column(name = "employee_id")
+    private int employeeId;
 
     public int getId() {
         return id;
@@ -34,6 +36,14 @@ public class Person {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public int getEmployeeId() {
+        return employeeId;
+    }
+
+    public void setEmployeeId(int employeeId) {
+        this.employeeId = employeeId;
     }
 
     @Override
